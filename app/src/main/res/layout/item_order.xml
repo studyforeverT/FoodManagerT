@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="status"
+            type="Integer" />
+        <variable
+            name="item"
+            type="com.nvc.foodmanager.model.Order" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        set_bg_by_status="@{status}"
+        app:cardCornerRadius="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/layout_image_food"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="10dp"
+                android:translationZ="999dp"
+                app:cardCornerRadius="80dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/img_status"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_launcher" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp"
+                android:maxHeight="65dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/layout_adjust_quantity"
+                app:layout_constraintStart_toEndOf="@id/layout_image_food"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="65dp"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:textColor="@color/white"
+                        android:gravity="top"
+                        android:layout_weight="1"
+                        android:layout_gravity="top"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:text="Tên KH: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2" />
+
+                    <TextView
+                        android:textColor="@color/white"
+                        android:gravity="top"
+                        android:layout_weight="1"
+                        android:layout_gravity="top"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:text="@{item.receiverName}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:maxLines="2" />
+                </LinearLayout>
+
+                <TextView
+                    android:gravity="bottom"
+                    android:layout_weight="1"
+                    android:layout_gravity="bottom"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="@{ item.convertToMoneyFormat() +` VND`}"/>
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_gravity="bottom"
+                    android:textStyle="italic"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="@{item.timestamp}"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_adjust_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{`SL: `+item.getSizeItem+``}" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

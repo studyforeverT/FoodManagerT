@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "883485003720",
+    "firebase_url": "https://orderfood-nvc-default-rtdb.firebaseio.com",
+    "project_id": "orderfood-nvc",
+    "storage_bucket": "orderfood-nvc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883485003720:android:36f3a81c9cd1d223ec3afd",
+        "android_client_info": {
+          "package_name": "com.nvc.ManagerFood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "883485003720-erb54seqqfiunp00p8alts3j5h8gdjh2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJY9H91dvcE-Q0O0Ikrcod-ghdBRRMwDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "883485003720-erb54seqqfiunp00p8alts3j5h8gdjh2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883485003720:android:d18c5ff0fc06382aec3afd",
+        "android_client_info": {
+          "package_name": "com.nvc.foodmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "883485003720-erb54seqqfiunp00p8alts3j5h8gdjh2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJY9H91dvcE-Q0O0Ikrcod-ghdBRRMwDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "883485003720-erb54seqqfiunp00p8alts3j5h8gdjh2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883485003720:android:b96b02482540d368ec3afd",
+        "android_client_info": {
+          "package_name": "com.nvc.orderfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "883485003720-upbfqnhjcvcqu1i1cd4min3j9htinpm7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nvc.orderfood",
+            "certificate_hash": "2272e4a7ce3fef6224c60a6157e9336285159774"
+          }
+        },
+        {
+          "client_id": "883485003720-erb54seqqfiunp00p8alts3j5h8gdjh2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJY9H91dvcE-Q0O0Ikrcod-ghdBRRMwDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "883485003720-erb54seqqfiunp00p8alts3j5h8gdjh2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

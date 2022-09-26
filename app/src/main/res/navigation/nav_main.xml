@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/categoryListFragment">
+
+    <fragment
+        android:id="@+id/categoryListFragment"
+        android:name="com.nvc.foodmanager.fragment.CategoryListFragment"
+        android:label="Categories Manager" >
+        <action
+            android:id="@+id/action_categoryListFragment_to_addCategoryFragment"
+            app:destination="@id/addCategoryFragment" />
+        <action
+            android:id="@+id/action_categoryListFragment_to_updateCategoryFragment"
+            app:destination="@id/updateCategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCategoryFragment"
+        android:name="com.nvc.foodmanager.fragment.AddCategoryFragment"
+        android:label="Add Category" />
+    <fragment
+        android:id="@+id/updateCategoryFragment"
+        android:name="com.gnut.tungpt1_advance_android_day_8.fragment.UpdateCategoryFragment"
+        android:label="Update Category" >
+        <argument
+            android:name="category"
+            app:argType="com.nvc.foodmanager.model.Category" />
+    </fragment>
+</navigation>

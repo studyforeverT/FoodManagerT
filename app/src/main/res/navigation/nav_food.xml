@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_food"
+    app:startDestination="@id/foodFragment">
+    <fragment
+        android:id="@+id/foodFragment"
+        android:name="com.nvc.foodmanager.fragment.FoodFragment"
+        android:label="Food Manager"
+        tools:layout="@layout/fragment_food" >
+        <action
+            android:id="@+id/action_foodFragment_to_addFoodFragment"
+            app:destination="@id/addFoodFragment" />
+        <action
+            android:id="@+id/action_foodFragment_to_editFoodFragment"
+            app:destination="@id/editFoodFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addFoodFragment"
+        android:name="com.nvc.foodmanager.fragment.AddFoodFragment"
+        android:label="Add Food"
+        tools:layout="@layout/fragment_food_add">
+        <action
+            android:id="@+id/action_addFoodFragment_to_foodFragment"
+            app:destination="@id/foodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFoodFragment"
+        android:name="com.nvc.foodmanager.fragment.EditFoodFragment"
+        android:label="Edit Food"
+        tools:layout="@layout/fragment_food_add">
+        <argument
+            android:name="food"
+            app:argType="com.nvc.foodmanager.model.Food" />
+    </fragment>
+</navigation>
